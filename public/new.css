@@ -1,0 +1,74 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+body{
+    height:100vh;
+    width:100vw;
+    background-color: #000000d9;
+    padding-top:20px;
+    padding-bottom:20px;
+    display: flex;
+    gap:20px;
+    
+}
+.border{
+    width:40%;
+    height:97vh;
+    color:white;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    padding-top: 130px;
+}
+form{
+    width:100%;
+    height:100%;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap:45px;
+    padding-left: 30%;
+}
+form input{
+    
+    height:45px;
+    width:70%;
+    border-radius:15px;
+    padding:15px;
+}
+form button{
+    height:45px;
+    width:45%;
+    border-radius: 30px;
+    cursor: pointer;
+    border:2px solid white;
+    font-size: 17px;
+}
+form button:hover{
+    font-size: 25px;
+    animation:all 0.2s linear ;
+    border:2px solid #00ffde78;
+    box-shadow: 0 0 10px 10px  #00ffde78;
+}
+@keyframes all{
+    0%{
+        border:2px solid white;
+        box-shadow: 0 0 0 0 black;
+        font-size: 17px;
+    }
+    100%{
+        border:2px solid #00ffde78;
+        font-size: 25px;
+        box-shadow: 0 0 10px 10px  #00ffde78;
+    }
+}
+svg .edit{
+    fill:#ff6383;
+    
+}
+.grass{
+    fill:rgb(21, 244, 21);
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management System</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <section class="head">
+        <h1>User Management System</h1>
+    </section>
+    <form action="/home/new" method="get">
+        <button>Enter User </button>
+    </form>
+    <div id="main">
+        <div class="container">
+            <div class="box">
+                <span>ID</span>
+                <p>Name</p>
+                <p>Email</p>
+                <p>Gender</p>
+                <p>Status</p>
+                <p>Action</p>
+                
+            </div>
+
+        </div>
+        <hr>
+        <% for(let player of players){ %>
+            <div class="container2">
+                <div class="box2">
+                    <p id="id">
+                        <%= player._id%>
+                    </p>
+                    <p id="name">
+                        <%= player.name%>
+                    </p>
+                    <p id="email">
+                        <%= player.email%>
+                    </p>
+                    <p id="gender">
+                        <%= player.gender%>
+                    </p>
+                    <p id="status">
+                        <%= player.status%>
+                    </p>
+                    <p id="action">
+                        <a href="http://localhost:8080/home/<%= player._id %>/edit"><ion-icon
+                                name="pencil-outline"></ion-icon></a>
+
+                    </p>
+                </div>
+            </div>
+            <hr style="opacity:0.4">
+            <% } %>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
