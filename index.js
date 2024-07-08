@@ -44,17 +44,19 @@ app.post("/home",(req,res)=>{
 app.get("/home/:id/edit",async (req,res)=>{
     let { id } = req.params;
     let person = await users.findById(id);
+    
+    console.log("edit user");
     res.render("edit.ejs",{person});
 })
 app.patch("/home/:id",(req,res)=>{
     let {name,email,gender} = req.body;
-    console.log(req.boby); 
+     
     res.redirect("/home");
 })
 app.delete("/home/:id", async (req,res)=>{
-    let { id } = req.params;
-    console.log("delete setup")
-    console.log(req.params);
-    let userDelete =  await users.findByIdAndDelete(id);
-    res.redirect("/home");
+    console.log("deletion proccess:")
+   let {id} = req.params;
+   console.log(req.params);
+   let deleted = await users.findByIdAndDelete(id);
+   res.redirect("/home");
 })

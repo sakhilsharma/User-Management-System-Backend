@@ -9,15 +9,18 @@
 <body>
     <div class="edit">
         <h2>Edit User Info</h2>
+        <div>
         <form action="/home/<% person._id%>?_method=PATCH" method="post">
             <input type="text" id="name" name="name" value="<%=person.name %>"  readonly>
             <input type="text" name="email" value="<%=person.email %>">
             <input type="text" name="gender" value="<%=person.gender %>">
             <button>Submit</button>
-        </form>
-        <form action="http://localhost:8080/home/<%= person._id %>?_method=DELETE">
-            <button>Delete User</button>
-        </form>
+        </form></div>
+        <div>
+            <form method="post" action="/home/<%= person._id %>?_method=DELETE">
+                <button>Delete</button>
+                </form>
+    </div>
     </div>
     <div class="svg">
         <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" width="752.6413" height="585.46439" viewBox="0 0 752.6413 585.46439" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M223.67935,455.65069V162.08561a4.82309,4.82309,0,0,1,4.81781-4.81781H649.57954a4.82309,4.82309,0,0,1,4.81781,4.81781V455.65069a4.82308,4.82308,0,0,1-4.81781,4.81781H228.49716A4.82307,4.82307,0,0,1,223.67935,455.65069Z" transform="translate(-223.67935 -157.2678)" fill="#fff"/>
